@@ -38,7 +38,7 @@
   <div class="insert">
   <h2>Enter your complaint</h2>
   <form action="addcom.php" method="post"><br>
-Mention the issue: <input type="text" name="Issue"><br>
+Mention the issue: <input type="text" name="Issue" required><br>
 Type of complaint: <input type="radio" name="Type" value="Electrician"> Electrician<br>
   <input type="radio" name="Type" value="Plumber"> Plumber<br>
   <input type="radio" name="Type" value="Carpenter"> Carpenter<br>

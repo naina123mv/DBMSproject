@@ -34,16 +34,16 @@ function loginguide() {
       <h1>LOGIN</h1>
     <div class="uname">
     <label><b>Username </b></label>
-    <input type="text" placeholder="Enter your username" name="uname" required>
+    <input type="text" style="width: 50%;" placeholder="Enter your username" name="uname" required>
       </div>
       <br>
       <div class="passwd">
     <label><b> Password </b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" style="width: 50%;" placeholder="Enter Password" name="psw" required>
       </div> 
       <div class="select">
-          <label for="designation"><b>Designation</b></label>
-    <select id="designation" name="who">
+      <label for="designation"><b>Designation</b></label>
+    <select id="designation" style="width: 35%;" name="who">
 	<option value="Student">Student</option>
       <option value="Steward">Steward</option>
       <option value="Repairer">Repairer</option>

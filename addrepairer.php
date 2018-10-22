@@ -65,8 +65,8 @@
   <div class="insert">
   <h2>Enter the details of the repairer you want to add</h2>
   <form action="addrep.php" method="post"><br>
-Repairer Id: <input type="text" name="R_id"><br>
-Name: <input type="text" name="Name"><br>
+Repairer Id: <input type="text" name="R_id" required><br>
+Name: <input type="text" name="Name" required><br>
 Profession: <br>
   <input type="radio" name="Type" value="Electrician"> Electrician<br>
   <input type="radio" name="Type" value="Plumber"> Plumber<br>

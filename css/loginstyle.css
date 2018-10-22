@@ -72,10 +72,12 @@ color: white;
   
     .uname{
         display:inline;
+        width: 30px;
     }
     
     .passwd{
         display:inline;
+        width: 30px;
     }
     .dropbtn{
     background-color: #010001;
@@ -120,13 +122,17 @@ color: white;
     display:block;
     padding: 16px;
     z-index:1;
-    left: 0;
+    left: 30%;
     margin: auto;
     margin-top: 100px;
     position: absolute;
-    top: 50%;
-    width: 100%;
+    top: 60%;
+    width: 40%;
+    background-color: #A9A9A9;
+    border-radius: 10px;
+    opacity: 0.8;
 }
+
     .select{
         display:block;
         z-index:1;

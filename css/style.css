@@ -11,7 +11,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/color1.jpg');
+    background-image: url('../images/leaf.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
@@ -32,7 +32,7 @@ body{
   top:2%;
 }
  h1,h3{
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Monoton', cursive;
     color: black;
   }
 

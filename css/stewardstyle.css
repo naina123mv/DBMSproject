@@ -1,4 +1,4 @@
-        .nav{
+            .nav{
             font-size: 18px !important;
             margin-top: 10px !important;
         }
@@ -101,13 +101,15 @@ button:hover {
         }
         .insert{
                   z-index:1;
-            left:0;
+            left:25%;
             line-height:80 px;
             margin: auto;
             margin-top:-100 px;
             position: absolute;
-            top:30%;
-            width: 100%;
+            top:25%;
+            width: 50%;
             font-size: 20px;
+            background-color: #A9A9A9;
+            border-radius: 10px;
         }
      
