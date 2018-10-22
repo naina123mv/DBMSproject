@@ -67,12 +67,13 @@
   <form action="addrep.php" method="post"><br>
 Repairer Id: <input type="text" name="R_id"><br>
 Name: <input type="text" name="Name"><br>
-Profession: <input type="radio" name="Type" value="Electrician"> Electrician<br>
+Profession: <br>
+  <input type="radio" name="Type" value="Electrician"> Electrician<br>
   <input type="radio" name="Type" value="Plumber"> Plumber<br>
   <input type="radio" name="Type" value="Carpenter"> Carpenter<br>
   <input type="radio" name="Type" value="Miscellaneous"> Miscellaneous<br>
 Contact No: <input type="number" name="PhoneNo"><br>
-<input type="submit" name="Save" value="Add Repairer"> 
+  <button type="submit" name="add">Add</button>
 </form>
 </div>
 

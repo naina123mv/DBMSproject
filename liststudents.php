@@ -71,9 +71,9 @@ require 'connection.php';?>
           $hostl=$row["Hostel"];
 $sql = "SELECT * FROM STUDENT WHERE Hostel='$hostl'";
 $result = $conn->query($sql);
-echo "<h3>";
+echo "<h3><b>";
 echo "List of students in your (". $row["Hostel"].") hostel";
-echo "</h3>";
+echo "</b></h3>";
 if ($result->num_rows > 0) {
     // output data of each row
 

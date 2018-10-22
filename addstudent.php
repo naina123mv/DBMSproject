@@ -63,27 +63,14 @@
   </div>
 </nav>
   <div class="insert">
-  <h2>Enter the details of the student you want to add</h2>
+  <h2><b>Enter the details of the student you want to add</b></h2>
   <form action="addstud.php" method="post"><br>
 Registration No: <input type="text" name="RegNo"><br>
 Name: <input type="text" name="Name"><br>
 Dob: <input type="date" name="Dob"><br>
-Hostel: <input type="radio" name="Hostel" value="LH-Blk1"> LH-Blk1<br>
-  <input type="radio" name="Hostel" value="LH-Blk2"> LH-Blk2<br>
-  <input type="radio" name="Hostel" value="LH-Blk3"> LH-Blk3<br>
-  <input type="radio" name="Hostel" value="LH-Blk4"> LH-Blk4<br>
-  <input type="radio" name="Hostel" value="MHL"> MHL<br>
-  <input type="radio" name="Hostel" value="A"> A<br>
-  <input type="radio" name="Hostel" value="B"> B<br>
-  <input type="radio" name="Hostel" value="C"> C<br>
-  <input type="radio" name="Hostel" value="D"> D<br>
-  <input type="radio" name="Hostel" value="E"> E<br>
-  <input type="radio" name="Hostel" value="F"> F<br>
-  <input type="radio" name="Hostel" value="G"> G<br>
-  <input type="radio" name="Hostel" value="MBH"> MBH<br>
 Room No: <input type="number" name="RoomNo"><br>
 Contact No: <input type="number" name="PhoneNo"><br>
-<input type="submit" name="Save" value="Add Student"> 
+  <button type="submit" name="add">Add Student</button>
 </form>
 </div>
 

@@ -15,15 +15,13 @@ require 'connection.php';?>
     
 </head>
 <body>
-
+<div id="backgroundpg"></div>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
-    <!--<div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div> -->
+    
     <ul class="nav navbar-nav">
       <!-- <li class="active"><a href="#">Home</a></li> -->
-      <li><a style="color: white" href="steward.php"><b>Home</b></a></li>                <!--change this to security.html -->
+      <li><a style="color: white" href="steward.php"><b>Home</b></a></li>                
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">View Repairers
         <span class="caret"></span></a>
@@ -66,7 +64,7 @@ require 'connection.php';?>
 </nav>
   
 <div class="container">
-  <p>Welcome 
+  <p>Hi  
   <?php echo $row["Name"]; ?>!!<br></p>
     
   <!--<p>A navigation bar is a navigation header that is placed at the top of the page.</p> -->

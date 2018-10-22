@@ -64,10 +64,14 @@
 </nav>
 <div class="container">
 <?php
+          $id=$_SESSION['login'];
+          $sql= "SELECT Name,Hostel FROM STEWARD WHERE '$id'=S_id";
+          $result = $conn->query($sql);
+          $row=$result->fetch_assoc();
 $regno=$_POST["RegNo"];
 $name=$_POST["Name"];
 $dob=$_POST["Dob"];
-$hostel=$_POST["Hostel"];
+$hostel=$row['Hostel'];
 $room=$_POST["RoomNo"];
 $phone=$_POST["PhoneNo"];
 $sql = "INSERT INTO STUDENT (RegNo, Name, Dob, Hostel,RoomNo,PhoneNo) VALUES ('$regno', '$name', '$dob','$hostel','$room','$phone')";

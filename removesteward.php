@@ -55,10 +55,10 @@ require 'connection.php';?>
   </div>
 </nav>
 <div class="insert">
-  <h2>Enter the ID of the steward you want to remove</h2>
+  <h2><b>Enter the ID of the steward you want to remove</b></h2>
   <form action="removeward.php" method="post"><br>
 Steward Id: <input type="text" name="S_id"><br>
-<input type="submit" value="Remove"> 
+  <button type="submit" name="remove">Remove</button>
 </form>
 </div>
 

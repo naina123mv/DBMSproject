@@ -63,28 +63,15 @@
   </div>
 </nav>
   <div class="insert">
-  <h2>Enter the reg no. of the student you want to modify</h2>
+  <h2><b>Enter the reg no. of the student you want to modify</b></h2>
   <form action="modstud.php" method="post"><br>
 Student Reg No: <input type="text" name="RegNo"><br>
 <h4>Enter only those values that you want to modify</h4>
 Name: <input type="text" name="Name"><br>
 Dob: <input type="date" name="Dob"><br>
-Hostel: <input type="radio" name="Hostel" value="LH-Blk1"> LH-Blk1<br>
-  <input type="radio" name="Hostel" value="LH-Blk2"> LH-Blk2<br>
-  <input type="radio" name="Hostel" value="LH-Blk3"> LH-Blk3<br>
-  <input type="radio" name="Hostel" value="LH-Blk4"> LH-Blk4<br>
-  <input type="radio" name="Hostel" value="MHL"> MHL<br>
-  <input type="radio" name="Hostel" value="A"> A<br>
-  <input type="radio" name="Hostel" value="B"> B<br>
-  <input type="radio" name="Hostel" value="C"> C<br>
-  <input type="radio" name="Hostel" value="D"> D<br>
-  <input type="radio" name="Hostel" value="E"> E<br>
-  <input type="radio" name="Hostel" value="F"> F<br>
-  <input type="radio" name="Hostel" value="G"> G<br>
-  <input type="radio" name="Hostel" value="MBH"> MBH<br>
 Room No: <input type="number" name="RoomNo"><br>
 Contact No: <input type="number" name="PhoneNo"><br>
-<input type="submit" name="Save" value="Modify"> 
+  <button type="submit" name="modify">Modify</button>
 </form>
 </div>
 

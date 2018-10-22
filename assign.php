@@ -58,17 +58,35 @@ require 'connection.php';?>
           $result = $conn->query($sql);
           $row=$result->fetch_assoc();
           echo $row["Name"]; ?></p>
+
       <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
   <div class="viewstud">
 <?php 
+$id=$_SESSION['login'];
+$sql= "SELECT Hostel FROM STEWARD WHERE '$id'=S_id";
+$result = $conn->query($sql);
+$row=$result->fetch_assoc();
+$hostel = $row['Hostel'];
+
 $cid = $_POST["C_id"];
+$sql="SELECT RegNo FROM COMPLAINT WHERE C_id='$cid'";
+$result = $conn->query($sql);
+$row=$result->fetch_assoc();
+$rno=$row["RegNo"];
+
+$sql = "SELECT Hostel FROM STUDENT WHERE RegNo='$rno'";
+$result = $conn->query($sql);
+$row=$result->fetch_assoc();
+$studhostel=$row["Hostel"];
+
+
 $sql="SELECT Type FROM COMPLAINT WHERE C_id='$cid'";
 $result = $conn->query($sql);
 $row=$result->fetch_assoc();
-if (!empty($row))
+if (($studhostel==$hostel) && (!empty($row)))
 {
     $type=$row['Type'];
 
@@ -78,12 +96,21 @@ if (!empty($row))
     if (!empty($row))
     {
         $rid=$row['R_id'];
-        $sql="UPDATE COMPLAINT SET Status='Assigned', R_id='$rid' WHERE C_id='$cid'";
-        if (mysqli_query($conn, $sql)) {
-                echo "Complaint successfully assigned!";
-            } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            }
+        $sql="SELECT Status FROM COMPLAINT WHERE C_id='$cid'";
+        $result = $conn->query($sql);
+        $row=$result->fetch_assoc();
+        if ($row['Status']!= 'Assigned')
+        {
+            $sql="UPDATE COMPLAINT SET Status='Assigned', R_id='$rid' WHERE C_id='$cid'";
+            if (mysqli_query($conn, $sql)) {
+                    echo "Complaint successfully assigned!";
+                } 
+            else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+        }
+        else
+          echo "The Complaint has already been assigned to ". $rid;
     }
     else
     {

@@ -2,7 +2,21 @@
             font-size: 18px !important;
             margin-top: 10px !important;
         }
-        
+        #backgroundpg{
+        position: fixed;
+        z-index:0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+            
+        filter:alpha(opacity=80);
+            background-image: linear-gradient( #FFFFFF,#404040);
+        }
+
         .container{
             z-index:1;
             left:0;
@@ -22,12 +36,44 @@
             font-size: 20px;
           margin-top: 30%;
         }
-        table, th, td{
-            border: solid black;
-            float:center;
-            margin: auto;
+       table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        float:center;
+        width: 100%;
+        margin-top:45px;
+        border: solid black;
 
-        }
+    }
+    th {border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+
+    }
+    td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+            background-color: #dddddd;
+    }
+    button {
+    background-color: #010001;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px auto;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    text-align: center;
+   
+}
+
+button:hover {
+    opacity: 0.8;
+}
 
         .view{
 
@@ -64,3 +110,4 @@
             width: 100%;
             font-size: 20px;
         }
+     

@@ -76,7 +76,6 @@ mysqli_query($conn, $sql);
 if (mysqli_affected_rows($conn) != 0) {
     $name=$_POST["Name"];
     $dob=$_POST["Dob"];
-    $hostel=$_POST["Hostel"];
     $room=$_POST["RoomNo"];
     $phone=$_POST["PhoneNo"];
     if (!empty($name))
@@ -89,14 +88,6 @@ if (mysqli_affected_rows($conn) != 0) {
     }
     if (!empty($dob))
       { $sql = "UPDATE STUDENT SET Dob='$dob' WHERE RegNo='$regno'";
-    if (mysqli_query($conn, $sql)) {
-        echo "Record modified successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-    }
-    if (!empty($hostel))
-      { $sql = "UPDATE STUDENT SET Hostel='$hostel' WHERE RegNo='$regno'";
     if (mysqli_query($conn, $sql)) {
         echo "Record modified successfully";
     } else {

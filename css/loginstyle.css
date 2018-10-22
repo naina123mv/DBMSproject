@@ -69,7 +69,7 @@ h5{
 color: white;
 }
 
-    
+  
     .uname{
         display:inline;
     }
@@ -133,7 +133,7 @@ color: white;
         left: 0;
         margin: auto;
         position: absolute;
-        top: 67%;
+        top: 59%;
         width: 100%;
         border-radius: 5px;
         padding: 20px;
@@ -146,12 +146,42 @@ color: white;
     .cancelbtn {
     width: auto;
     padding: 10px 18px;
-    background-color: transparent;
+    background-color:   #A9A9A9;
+    color:black;
+    opacity: 0.7;
     float: left;
-        font-size: 16px;
+        font-size: 20px;
         left: 0;
         position: absolute;
         z-index: 1;
+        border-radius: 5px; 
+}
+
+   .helpbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color:   #A9A9A9;
+    color: black;
+    opacity:0.7;
+    float: right;
+        font-size: 20px;
+        left: 93%;
+        position: absolute;
+        z-index: 1;
+        border-radius: 5px;
+}
+.adminbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color:   #A9A9A9;
+    color: black;
+    opacity:0.7;
+    float: right;
+        font-size: 20px;
+        left: 10%;
+        position: absolute;
+        z-index: 1;
+        border-radius: 5px;
 }
 span.psw {
     float: right;
@@ -164,8 +194,4 @@ span.psw {
        display: block;
        float: none;
     }
-    .cancelbtn {
-       width: 100%;
-       background-color: #C0C0C0;
-    }
-}
+    

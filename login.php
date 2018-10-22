@@ -20,24 +20,27 @@ session_start();
 
 <div id="background"></div>
 
-<a href="index.php"><button type="button" class="cancelbtn">Home</button></a>
-    
+<a href="index.php"><button type="button" class="cancelbtn"><b>HOME</b></button></a>
+<a href="masterlogin.php"> <button class="adminbtn" ><b>ADMIN</b></button></a>
+  <button class="helpbtn" onclick="loginguide()"><b>HELP</b></button>
+
+<script>
+function loginguide() {
+    alert("\t \t \t \t \tLOGIN GUIDE \nStudent: Username - roll number ; Password - Dob in the format yyyy-mm-dd\nSteward: Username - id; Password - Phone number\nRepairer: Username - id ; Password : Phone number");
+}
+</script>  
   <form action="login.php" method="POST">   <!-- was security.php -->
   <div class="container">
-      <h1>Login</h1>
+      <h1>LOGIN</h1>
     <div class="uname">
-    <label><b>User Name </b></label>
+    <label><b>Username </b></label>
     <input type="text" placeholder="Enter your username" name="uname" required>
       </div>
       <br>
       <div class="passwd">
-    <label><b>Password</b></label>
+    <label><b> Password </b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
       </div> 
-      <p style="color: black;">If you are a student, your username is your roll number and password, your Dob.<br> 
-      If you are a steward, your username is your id and password is your phone number.<br>
-      If you are a repairer, your username is your id and password is your phone number.</p>
-      <br>
       <div class="select">
           <label for="designation"><b>Designation</b></label>
     <select id="designation" name="who">
@@ -47,6 +50,8 @@ session_start();
       
     </select>
       </div>
+      <br>
+      <br>
       <br>
       <br>
       

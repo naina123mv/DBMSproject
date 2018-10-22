@@ -63,10 +63,10 @@
   </div>
 </nav>
   <div class="insert">
-  <h2>Enter the Registration Number of the student you want to remove</h2>
+  <h2><b>Enter the Registration Number of the student you want to remove</b></h2>
   <form action="removestud.php" method="post"><br>
 Reg No: <input type="text" name="RegNo"><br>
-<input type="submit" value="Remove"> 
+  <button type="submit" name="rem">Remove</button>
 </form>
 </div>
 

@@ -69,11 +69,11 @@ require 'connection.php';?>
           $result = $conn->query($sql);
           $row=$result->fetch_assoc();
           $hostl=$row["Hostel"];
-$sql = "SELECT * FROM COMPLAINT ORDER BY Date DESC";
+$sql = "SELECT * FROM COMPLAINT WHERE Status != 'solved' ORDER BY Date DESC ";
 $result = $conn->query($sql);
-echo "<h3>";
+echo "<h3><b>";
 echo "List of complaints registered in your hostel(". $row["Hostel"].")";
-echo "</h3>";
+echo "</b></h3>";
 if ($result->num_rows > 0) {
     // output data of each row
 
@@ -97,9 +97,11 @@ else {
 
 ?>
 <form action="assign.php" method="post"><br>
-<h3>Enter the complaint id to be assigned</h3>
+<h3><b>Enter the Id of the complaint to be assigned to appropriate repairer</b></h3>
 Complaint Id: <input type="text" name="C_id" > <br>
-  <input type="submit" value="Assign"> 
+  <button type="submit" name="assign">Assign</button>
+  <br><br>
 </div>
+
 </body>
 </html>

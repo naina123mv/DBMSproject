@@ -73,7 +73,7 @@ Hostel: <input type="radio" name="Hostel" value="LH-Blk1"> LH-Blk1<br>
   <input type="radio" name="Hostel" value="G"> G<br>
   <input type="radio" name="Hostel" value="MBH"> MBH<br>
 Contact No: <input type="number" name="PhoneNo"><br>
-<input type="submit" name="Save" value="Add Steward"> 
+  <button type="submit" name="add">Add</button>
 </form>
 </div>
 

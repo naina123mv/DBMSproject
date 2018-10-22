@@ -63,7 +63,7 @@ require 'connection.php';?>
   </div>
 </nav>
   <div class="view">
-  <h3>List of Repairers</h3>
+  <h3><b>List of Repairers</b></h3>
 <?php
 $sql = "SELECT * FROM REPAIRER";
 $result = $conn->query($sql);

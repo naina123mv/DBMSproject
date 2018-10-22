@@ -11,7 +11,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/light.jpg');
+    background-image: url('../images/color1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
@@ -31,15 +31,12 @@ body{
 .header{
   top:2%;
 }
+ h1,h3{
+    font-family: 'Source Serif Pro', serif;
+    color: black;
+  }
 
-h1{
-color: black;
-font-family: 'Crimson Text', serif;
-}
-h3{
-  color: black;
-  font-family: 'Crimson Text', serif;
-}
+
   input[type="submit"]
   {
   color: white;
@@ -59,7 +56,7 @@ h3{
   button{
 	z-index: -1;
      background-color: #010001;  /*41301e; d29700 4C50AF;  Green */
-    border: none;
+    border: white;
     color: white; /*#b39672;*/
     width: 20%;
     padding: 15px 32px;
