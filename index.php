@@ -18,7 +18,6 @@
 
 
 
-<div class="content">
 <a href="login.php" id="link">
 <button type="button">Login</button>
 </a>

@@ -60,13 +60,18 @@ $sid=$_POST["S_id"];
 $name=$_POST["Name"];
 $hostel=$_POST["Hostel"];
 $phone=$_POST["PhoneNo"];
-$sql = "INSERT INTO STEWARD (S_id, Name, Hostel, PhoneNo) VALUES ('$sid', '$name', '$hostel','$phone')";
+$sql = "SELECT Name FROM STEWARD WHERE S_id='$sid'";
+$result = $conn->query($sql);
+if ($result->num_rows == 0)
+{$sql = "INSERT INTO STEWARD (S_id, Name, Hostel, PhoneNo) VALUES ('$sid', '$name', '$hostel','$phone')";
 
 if (mysqli_query($conn, $sql)) {
     echo $name . " added into records successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+}}
+else
+  echo "This Steward Id exists! Please use a different one!";
 
 ?>
 </div>

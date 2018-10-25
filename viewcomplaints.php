@@ -14,9 +14,12 @@
     
 </head>
 <body>
-<a href="index.php"><button type="button" class="cancelbtn">Home</button></a>
 <nav class="navbar navbar-inverse navbar-fixed-top">
-  
+  <ul class="nav navbar-nav">
+      <!-- <li class="active"><a href="#">Home</a></li> -->
+      <li><a style="color: white" href="student.php"><b>Home</b></a></li>                <!--change this to security.html -->
+        
+    </ul>
     <ul class="nav navbar-nav navbar-right">
   <p class="navbar-text"><span class="glyphicon glyphicon-user"></span> <?php 
           $id=$_SESSION['login'];

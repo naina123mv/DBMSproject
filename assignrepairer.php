@@ -98,7 +98,7 @@ else {
 ?>
 <form action="assign.php" method="post"><br>
 <h3><b>Enter the Id of the complaint to be assigned to appropriate repairer</b></h3>
-Complaint Id: <input type="text" name="C_id" > <br>
+Complaint Id: <input type="text" name="C_id" required> <br>
   <button type="submit" name="assign">Assign</button>
   <br><br>
 </div>

@@ -56,6 +56,7 @@ require 'connection.php';?>
 </nav>
 <div class="container">
 <?php
+$flag = 0;
 $sid=$_POST["S_id"];
 $sql="SELECT Name FROM STEWARD WHERE S_id='$sid'";
 mysqli_query($conn,$sql);
@@ -67,7 +68,7 @@ if (mysqli_affected_rows($conn)!=0)
     if(!empty($name))
       { $sql = "UPDATE STEWARD SET Name='$name' WHERE S_id='$sid'";
               if (mysqli_query($conn, $sql)) {
-            echo "Record modified successfully";
+            $flag=1;
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -75,7 +76,7 @@ if (mysqli_affected_rows($conn)!=0)
     if(!empty($hostel))
       { $sql = "UPDATE STEWARD SET Hostel='$hostel' WHERE S_id='$sid'";
               if (mysqli_query($conn, $sql)) {
-            echo "Record modified successfully";
+            $flag=1;
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -83,11 +84,18 @@ if (mysqli_affected_rows($conn)!=0)
     if(!empty($phone))
       { $sql = "UPDATE STEWARD SET PhoneNo='$phone' WHERE S_id='$sid'";
               if (mysqli_query($conn, $sql)) {
-            echo "Record modified successfully";
+            $flag=1;
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
       }
+    else
+    {
+      echo "Nothing changed to modify";
+
+    }
+    if($flag == 1)
+       echo "Record modified successfully";
       
 }
 else

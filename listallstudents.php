@@ -59,7 +59,7 @@ require 'connection.php';?>
 $sql = "SELECT * FROM STUDENT ";
 $result = $conn->query($sql);
 echo "<h3><b>";
-echo "List of students in your various NITC hostel";
+echo "List of students residing in various NITC hostel";
 echo "</b></h3>";
 if ($result->num_rows > 0) {
     // output data of each row

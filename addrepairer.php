@@ -72,7 +72,7 @@ Profession: <br>
   <input type="radio" name="Type" value="Plumber"> Plumber<br>
   <input type="radio" name="Type" value="Carpenter"> Carpenter<br>
   <input type="radio" name="Type" value="Miscellaneous"> Miscellaneous<br>
-Contact No: <input type="number" name="PhoneNo"><br>
+Contact No: <input type="number" name="PhoneNo" required><br>
   <button type="submit" name="add">Add</button>
 </form>
 </div>

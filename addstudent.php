@@ -65,11 +65,11 @@
   <div class="insert">
   <h2><b>Enter the details of the student you want to add</b></h2>
   <form action="addstud.php" method="post"><br>
-Registration No: <input type="text" name="RegNo"><br>
-Name: <input type="text" name="Name"><br>
-Dob: <input type="date" name="Dob"><br>
-Room No: <input type="number" name="RoomNo"><br>
-Contact No: <input type="number" name="PhoneNo"><br>
+Registration No: <input type="text" name="RegNo" required><br>
+Name: <input type="text" name="Name" required><br>
+Dob: <input type="date" name="Dob" required><br>
+Room No: <input type="number" name="RoomNo" required><br>
+Contact No: <input type="number" name="PhoneNo" required><br>
   <button type="submit" name="add">Add Student</button>
 </form>
 </div>

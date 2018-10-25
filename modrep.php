@@ -64,6 +64,7 @@
 </nav>
 <div class="container">
 <?php
+$flag = 0;
 $rid=$_POST["R_id"];
 $sql="SELECT Name FROM REPAIRER WHERE R_id='$rid'";
 mysqli_query($conn,$sql);
@@ -75,7 +76,7 @@ if (mysqli_affected_rows($conn)!=0)
     if(!empty($name))
       { $sql = "UPDATE REPAIRER SET Name='$name' WHERE R_id='$rid'";
               if (mysqli_query($conn, $sql)) {
-            echo "Record modified successfully";
+            $flag=1;
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -83,7 +84,7 @@ if (mysqli_affected_rows($conn)!=0)
     if(!empty($type))
       { $sql = "UPDATE REPAIRER SET Type='$type' WHERE R_id='$rid'";
               if (mysqli_query($conn, $sql)) {
-            echo "Record modified successfully";
+            $flag=1;
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -91,11 +92,18 @@ if (mysqli_affected_rows($conn)!=0)
     if(!empty($phone))
       { $sql = "UPDATE REPAIRER SET PhoneNo='$phone' WHERE R_id='$rid'";
               if (mysqli_query($conn, $sql)) {
-            echo "Record modified successfully";
+            $flag=1;
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
       }
+      else
+    {
+      echo "Nothing changed to modify";
+
+    }
+      if ($flag == 1)
+          echo "Recod modified successfully";
       
 }
 else

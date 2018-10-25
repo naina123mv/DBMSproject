@@ -57,9 +57,9 @@ require 'connection.php';?>
 <div class="insert">
   <h2>Enter the details of the steward you want to add</h2>
   <form action="addward.php" method="post"><br>
-Steward Id: <input type="text" name="S_id"><br>
-Name: <input type="text" name="Name"><br>
-Hostel: <input type="radio" name="Hostel" value="LH-Blk1"> LH-Blk1<br>
+Steward Id: <input type="text" name="S_id" required=""><br>
+Name: <input type="text" name="Name" required=""><br>
+Hostel: <input type="radio" name="Hostel" value="LH-Blk1" required> LH-Blk1<br>
   <input type="radio" name="Hostel" value="LH-Blk2"> LH-Blk2<br>
   <input type="radio" name="Hostel" value="LH-Blk3"> LH-Blk3<br>
   <input type="radio" name="Hostel" value="LH-Blk4"> LH-Blk4<br>
@@ -72,7 +72,7 @@ Hostel: <input type="radio" name="Hostel" value="LH-Blk1"> LH-Blk1<br>
   <input type="radio" name="Hostel" value="F"> F<br>
   <input type="radio" name="Hostel" value="G"> G<br>
   <input type="radio" name="Hostel" value="MBH"> MBH<br>
-Contact No: <input type="number" name="PhoneNo"><br>
+Contact No: <input type="number" name="PhoneNo" required=""><br>
   <button type="submit" name="add">Add</button>
 </form>
 </div>

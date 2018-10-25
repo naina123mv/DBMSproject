@@ -43,7 +43,7 @@
         width: 100%;
         margin-top:45px;
         border: solid black;
-
+        font-size: 20px;
     }
     th {border: 1px solid black;
         text-align: center;
@@ -106,6 +106,19 @@ button:hover {
             margin: auto;
             margin-top:-100 px;
             position: absolute;
+            top:25%;
+            width: 50%;
+            font-size: 20px;
+            background-color: #A9A9A9;
+            border-radius: 10px;
+        }
+        .inserttab{
+                  z-index:1;
+            left:0;
+            line-height:80 px;
+            margin: auto;
+            margin-top:-100 px;
+            position: relative;
             top:25%;
             width: 50%;
             font-size: 20px;

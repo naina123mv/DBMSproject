@@ -57,7 +57,7 @@ require 'connection.php';?>
 <div class="insert">
   <h2>Enter the id of the steward you want to modify</h2>
   <form action="modward.php" method="post"><br>
-Steward Id: <input type="text" name="S_id"><br>
+Steward Id: <input type="text" name="S_id" required=""><br>
 <h4>Enter new details</h4>
 Name: <input type="text" name="Name"><br>
 Hostel: <input type="radio" name="Hostel" value="LH-Blk1"> LH-Blk1<br>

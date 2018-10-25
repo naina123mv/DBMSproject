@@ -65,7 +65,7 @@
   <div class="insert">
   <h2><b>Enter the reg no. of the student you want to modify</b></h2>
   <form action="modstud.php" method="post"><br>
-Student Reg No: <input type="text" name="RegNo"><br>
+Student Reg No: <input type="text" name="RegNo" required><br>
 <h4>Enter only those values that you want to modify</h4>
 Name: <input type="text" name="Name"><br>
 Dob: <input type="date" name="Dob"><br>

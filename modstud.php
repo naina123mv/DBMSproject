@@ -69,7 +69,7 @@ $id=$_SESSION['login'];
           $result = $conn->query($sql);
           $row=$result->fetch_assoc();
           $hostl=$row["Hostel"];
-
+$flag=0;
 $regno=$_POST["RegNo"];
 $sql="SELECT NAME FROM STUDENT WHERE RegNo='$regno' AND Hostel='$hostl'";
 mysqli_query($conn, $sql);
@@ -81,7 +81,7 @@ if (mysqli_affected_rows($conn) != 0) {
     if (!empty($name))
       {$sql = "UPDATE STUDENT SET Name='$name' WHERE RegNo='$regno'";
         if (mysqli_query($conn, $sql)) {
-            echo "Record modified successfully";
+           $flag=1;
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -89,7 +89,7 @@ if (mysqli_affected_rows($conn) != 0) {
     if (!empty($dob))
       { $sql = "UPDATE STUDENT SET Dob='$dob' WHERE RegNo='$regno'";
     if (mysqli_query($conn, $sql)) {
-        echo "Record modified successfully";
+        $flag=1;
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -97,19 +97,26 @@ if (mysqli_affected_rows($conn) != 0) {
     if (!empty($room))
      { $sql = "UPDATE STUDENT SET RoomNo='$room' WHERE RegNo='$regno'";
     if (mysqli_query($conn, $sql)) {
-        echo "Record modified successfully";
+       $flag=1;
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     }
     if (!empty($phone))
       { $sql = "UPDATE STUDENT SET PhoneNo='$phone' WHERE RegNo='$regno'";
-    if (mysqli_query($conn, $sql)) {
-        echo "Record modified successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        if (mysqli_query($conn, $sql)) {
+            $flag=1;
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
     }
+    else
+    {
+      echo "Nothing changed to modify";
+
     }
+    if($flag == 1)
+       echo "Record modified successfully";
 }
 else {
         echo "Error! Record not found " ;

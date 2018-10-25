@@ -57,7 +57,7 @@ $sql="SELECT STUDENT.RegNo,STUDENT.Name,STUDENT.Hostel,STUDENT.RoomNo,COMPLAINT.
 $result = $conn->query($sql);
 if($result->num_rows > 0)
 {
-  echo "<center><b><h2>YOUR  TASK  FOR  THE  DAY!!!  SORT THEM OUT  QUICKLY</h2></font></b></center>";
+  echo "<center><b><h2>YOUR  TASK(S)  FOR  THE  DAY!!!  SORT THEM OUT QUICKLY</h2></font></b></center>";
   echo "<table>"; 
     echo "<tr><th>Name</th><th>RegNo</th><th>Hostel</th><th>RoomNo</th><th>Issue</th><th>C_id</th></tr>";
 
@@ -74,22 +74,19 @@ else
 
 ?>
 
-<!--<br><br><div align=center>
-<a href="submitsolved.php"><button type="button" class="cancelbtn">Solved any?</button></a>
-<br>Note down Complaint ID</div>-->
 
     
-  <form action="submitsolved.php" method="POST">   <!-- was security.php -->
-  <div class="insert">
-      <h1><b>Enter The Id of the Complaint you have sorted out, if any</b></h1>
+  <form action="submitsolved.php" method="POST">   
+  <div class="inserttab">
+      <h2><b>Enter The Id of the Complaint you have sorted out, if any</b></h2>
     <div class="cid">
     <label>Complaint ID </label>
     <input type="text" placeholder="Enter Complaint ID" name="cid" required>
       </div>
       
       <br>
-     
-    <button type="submit" name="submitsolved" >Confirm</button>
+     <button type="submit" name="add">Submit</button>
+    
       <br></div>
      
 </form>

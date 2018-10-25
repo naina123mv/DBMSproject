@@ -65,7 +65,7 @@
   <div class="insert">
   <h2><b>Enter the ID of the repairer you want to remove</b></h2>
   <form action="removerep.php" method="post"><br>
-Repairer Id: <input type="text" name="R_id"><br>
+Repairer Id: <input type="text" name="R_id" required><br>
   <button type="submit" name="remove">Remove</button>
 </form>
 </div>

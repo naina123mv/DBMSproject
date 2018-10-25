@@ -23,7 +23,7 @@ require 'connection.php';
     </div> -->
     <ul class="nav navbar-nav">
       <!-- <li class="active"><a href="#">Home</a></li> -->
-      <li><a href="repairer.php"><b>Home</b></a></li> 
+      <li><a href="repairer.php" style="color: white;"><b>Home</b></a></li> 
 	<li><a href="samrep.php">View Complaints</a></li>                <!--change this to security.html -->
       
     </ul>
@@ -40,8 +40,8 @@ require 'connection.php';
   </div>
 </nav>
 <!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
-  <div class="container-fluid">
-	<br><br><br><br><br><p>
+  <div class="container">
+	<p>
 	<font size=12>Welcome</font><br>
       <?php
 	echo "<h2>" . $row["Name"]."</h2>";
