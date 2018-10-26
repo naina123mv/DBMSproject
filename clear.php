@@ -1,5 +1,5 @@
 <?php 
-require 'connection.php';?>
+  require 'connection.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,7 @@ require 'connection.php';?>
     <!--<div class="navbar-header">
       <a class="navbar-brand" href="#">WebSiteName</a>
     </div> -->
-    <ul class="nav navbar-nav">
+     <ul class="nav navbar-nav">
       <!-- <li class="active"><a href="#">Home</a></li> -->
       <li><a href="steward.php">Home</a></li>                <!--change this to security.html -->
       <li class="dropdown">
@@ -35,7 +35,7 @@ require 'connection.php';?>
         </ul>
       </li>
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown"  href="#"><b>View Students</b>
+        <a class="dropdown-toggle" data-toggle="dropdown"  href="#">View Students
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="liststudents.php">View Student List</a></li>
@@ -45,7 +45,7 @@ require 'connection.php';?>
           
         </ul>
       </li>
-      <li><a style="color: white" href="assignrepairer.php"><b>Assign Repairer</b></a></li>
+      <li><a href="assignrepairer.php">Assign Repairer</a></li>
         
     </ul>
 
@@ -54,7 +54,7 @@ require 'connection.php';?>
     <ul class="nav navbar-nav navbar-right">
   <p class="navbar-text"><span class="glyphicon glyphicon-user"></span> <?php 
           $id=$_SESSION['login'];
-          $sql= "SELECT * FROM STEWARD WHERE '$id'=S_id";
+          $sql= "SELECT Name FROM STEWARD WHERE '$id'=S_id";
           $result = $conn->query($sql);
           $row=$result->fetch_assoc();
           echo $row["Name"]; ?></p>
@@ -62,48 +62,35 @@ require 'connection.php';?>
     </ul>
   </div>
 </nav>
-  <div class="viewstud">
+<div class="container">
 <?php
- $id=$_SESSION['login'];
-          $sql= "SELECT * FROM STEWARD WHERE '$id'=S_id";
-          $result = $conn->query($sql);
-          $row=$result->fetch_assoc();
-          $hostl=$row["Hostel"];
-$sql = "SELECT * FROM COMPLAINT WHERE Status != 'solved' ORDER BY Date ";
+$sid=$_SESSION['login'];
+$id=$_POST['C_id'];
+$sql="SELECT * FROM COMPLAINT WHERE '$id'=C_id";
 $result = $conn->query($sql);
-echo "<h3><b>";
-echo "List of complaints registered in your hostel(". $row["Hostel"].")";
-echo "</b></h3>";
-if ($result->num_rows > 0) {
-    // output data of each row
+$row=$result->fetch_assoc();
+$regno=$row['RegNo'];
+$sql="SELECT Hostel FROM STEWARD WHERE '$sid'=S_id";
+$result = $conn->query($sql);
+$row=$result->fetch_assoc();
+$hostel=$row['Hostel'];
 
-    echo "<table>"; 
+$sql="SELECT Hostel FROM STUDENT WHERE '$regno'=RegNo";
+$result = $conn->query($sql);
+$row=$result->fetch_assoc();
 
-        echo "<tr><th>COMPLAINT_ID</th><th>STUDENT REG_NO</th><th>TYPE</th><th>DATE</th><th>ISSUE</th><th>STATUS</th><th>REPAIRER_ID</th></tr>";
-        while($row=$result->fetch_assoc())
-        { $rno= $row['RegNo'];
-              $sql = "SELECT * FROM STUDENT WHERE RegNo='$rno' and Hostel='$hostl'";
-              mysqli_query($conn, $sql);
-              if (mysqli_affected_rows($conn) != 0)
-              {
-          echo "<tr><td>" . $row['C_id'] . "</td><td>".$row['RegNo'] . "</td><td>". $row['Type'] . "</td><td>". $row['Date'] . "</td><td>". $row['Issue'] . "</td><td>".$row['Status'] . "</td><td>".$row['R_id'] . "</td></tr>"; 
-            }
-        }
-        echo "</table>"; 
-} 
-else {
-    echo "0 results";
+if($hostel==$row['Hostel'])
+{
+          $sql= "DELETE FROM COMPLAINT WHERE '$id'=C_id";
+          
+if (mysqli_query($conn, $sql)) {
+    echo $id. " removed from the complaint log successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-
+}
+else{
+  echo "ID NOT FOUND!";
+}
 ?>
-<form action="assign.php" method="post"><br>
-<h3><b>Enter the Id of the complaint to be assigned to appropriate repairer</b></h3>
-Complaint Id: <input type="text" name="C_id" required> <br>
-  <button type="submit" name="assign">Assign</button>
-
-  <br><br>
-  <h3>Want to clear some complaints?</h3><a href="clearcomp.php"><button class="ComplBtn" >Click Here </button></a>
 </div>
-
-</body>
-</html>

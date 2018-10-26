@@ -34,35 +34,21 @@
 
 <div class="viewstud">
 <?php
-$id=$_SESSION['login'];
-$sql = "SELECT Date,Type,Issue,Status,C_id FROM COMPLAINT WHERE '$id'=RegNo";
-$result = $conn->query($sql);
-echo "<h3>";
-echo "List of complaints registered by you";
-echo "</h3>";
-if ($result->num_rows > 0) {
-    // output data of each row
+$cid=$_POST['C_id'];
+$regno=$_SESSION['login'];
+$sql = "DELETE FROM COMPLAINT WHERE RegNo='$regno' AND C_id='$cid'";
 
-    echo "<table>"; 
-
-        echo "<tr><th>ComplaintId</th><th>Date</th><th>Type</th><th>Issue</th><th>Status</th></tr>";
-        while($row=$result->fetch_assoc())
-        {  
-                echo "<tr><td>" . $row['C_id'] . "</td><td>" . $row['Date'] . "</td><td>". $row['Type'] . "</td><td>". $row['Issue'] . "</td><td>". $row['Status'] ."</td></tr>";  
-        }
-        echo "</table>"; 
-} 
-else {
-    echo "0 results";
+if (mysqli_query($conn, $sql)) {
+  if (mysqli_affected_rows($conn) != 0)
+    echo $cid. " removed from the records successfully";
+  else
+    echo "Invalid Complaint Id";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
+  
 ?>
-<br>
- <h3><i>Want to remove some complaints?</i></h3>
- <h4><b>NOTE:</b> Your complaint will be PERMANENTLY deleted</h4>
- <form action="remcomp.php" method="post">
- <input type="text" name="C_id" placeholder="Enter The Complaint ID" required> <br>
-  <button type="submit" name="assign">Confirm Removal</button>
 </div>
 </body>
 </html>

@@ -96,13 +96,13 @@ else {
 }
 
 ?>
-<form action="assign.php" method="post"><br>
-<h3><b>Enter the Id of the complaint to be assigned to appropriate repairer</b></h3>
-Complaint Id: <input type="text" name="C_id" required> <br>
-  <button type="submit" name="assign">Assign</button>
+<form action="clear.php" method="post"><br>
+<h3><i>Want to remove any?</i></h3>
+<input type="text" name="C_id" placeholder="Enter The Complaint ID" required> <br>
+  <button type="submit" name="assign">Confirm Removal</button>
 
   <br><br>
-  <h3>Want to clear some complaints?</h3><a href="clearcomp.php"><button class="ComplBtn" >Click Here </button></a>
+  
 </div>
 
 </body>

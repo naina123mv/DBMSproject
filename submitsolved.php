@@ -40,7 +40,7 @@ require 'connection.php';
   </div>
 </nav> 
   
-
+<div class="viewstud">
 <?php
 
  $rid=$_SESSION['login'];
@@ -57,13 +57,14 @@ $s1= "SELECT * FROM COMPLAINT WHERE C_id='$id' AND R_id='$rid' AND Status='Assig
 			 $result=$conn->query($sq1);						
         	/*$s2= "SELECT * FROM COMPLAINT WHERE C_id='$id' and Status='solved'";
           $result=$conn->query($s2);*/
-        if($result->num_rows > 0)
+
         		echo "<h1>Successfully updated</h1>";	
-        else echo "<h1>Updation Unsuccessful</h1>";		
+        		
 		}
 		else
-    			echo '<script>alert(" Complaint Id Does Not Exist")</script>';
-          
+    			{echo '<script>alert(" Complaint Id Does Not Exist")</script>';
+    			echo "Sorry, No such ID!";
+          }
    /*$sq1="UPDATE COMPLAINT SET Status='solved' WHERE C_id='$id'";*/
   /*$s2= "SELECT * FROM COMPLAINT WHERE C_id='$id' and Status='solved'";
    $result = $conn->query($s2);
@@ -86,7 +87,7 @@ else
 $conn->close();
 
 ?>
-
+</div>
 
 </body>
  

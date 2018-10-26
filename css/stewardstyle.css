@@ -74,6 +74,16 @@
 button:hover {
     opacity: 0.8;
 }
+button .ComplBtn {
+    background-color: #A9A9A9;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px auto;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+}
 
         .view{
 
