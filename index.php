@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>complaints</title>
+    <title>Hostel Complaints</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h1 class="text-uppercase">
-              <strong>NATIONAL INSTITUTE OF TECHNOLOGY</strong>
+              <strong>NATIONAL INSTITUTE OF TECHNOLOGY, CALICUT</strong>
             </h1>
             <hr>
           </div>

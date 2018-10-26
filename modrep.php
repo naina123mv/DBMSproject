@@ -97,13 +97,14 @@ if (mysqli_affected_rows($conn)!=0)
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
       }
-      else
+      
+      if ($flag == 1)
+          echo "Recod modified successfully";
+        else
     {
       echo "Nothing changed to modify";
 
     }
-      if ($flag == 1)
-          echo "Recod modified successfully";
       
 }
 else

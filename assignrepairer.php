@@ -79,14 +79,14 @@ if ($result->num_rows > 0) {
 
     echo "<table>"; 
 
-        echo "<tr><th>COMPLAINT_ID</th><th>TYPE</th><th>DATE</th><th>ISSUE</th><th>STATUS</th><th>REPAIRER_ID</th><th>REG_NO</th><th>ASSIGN</th></tr>";
+        echo "<tr><th>COMPLAINT_ID</th><th>STUDENT REG_NO</th><th>TYPE</th><th>DATE</th><th>ISSUE</th><th>STATUS</th><th>REPAIRER_ID</th></tr>";
         while($row=$result->fetch_assoc())
         { $rno= $row['RegNo'];
               $sql = "SELECT * FROM STUDENT WHERE RegNo='$rno' and Hostel='$hostl'";
               mysqli_query($conn, $sql);
               if (mysqli_affected_rows($conn) != 0)
               {
-          echo "<tr><td>" . $row['C_id'] . "</td><td>". $row['Type'] . "</td><td>". $row['Date'] . "</td><td>". $row['Issue'] . "</td><td>".$row['Status'] . "</td><td>".$row['R_id'] . "</td><td>".$row['RegNo'] . "</td><td>".$row['RegNo'] . "</td></tr>"; 
+          echo "<tr><td>" . $row['C_id'] . "</td><td>".$row['RegNo'] . "</td><td>". $row['Type'] . "</td><td>". $row['Date'] . "</td><td>". $row['Issue'] . "</td><td>".$row['Status'] . "</td><td>".$row['R_id'] . "</td></tr>"; 
             }
         }
         echo "</table>"; 
