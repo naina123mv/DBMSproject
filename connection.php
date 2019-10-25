@@ -4,8 +4,7 @@ if(session_id()=='' || !isset($_SESSION['login']))
 {
   header("Location:login.php");
 }
-?>
-<?php
+
 
 $servername = "localhost";
 $user = "root";

@@ -1,5 +1,6 @@
 <?php 
-require 'connection.php';?>
+require 'connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
