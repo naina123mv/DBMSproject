@@ -4,6 +4,12 @@ body{
  font-size: 22px;
  padding: 80px;
   }
+
+.v-box{
+  margin: 20px;
+  padding: 5px;
+  z-index: 5;
+}
 #background {
     z-index : -2;
     position: fixed;
