@@ -74,10 +74,10 @@ $dob=$_POST["Dob"];
 $hostel=$row['Hostel'];
 $room=$_POST["RoomNo"];
 $phone=$_POST["PhoneNo"];
-$sql = "INSERT INTO STUDENT (RegNo, Name, Dob, Hostel,RoomNo,PhoneNo) VALUES ('$regno', '$name', '$dob','$hostel','$room','$phone')";
+$sql = "INSERT INTO STUDENT(RegNo, Name, Dob, Hostel,RoomNo,PhoneNo) VALUES ('$regno', '$name', '$dob','$hostel','$room','$phone')";
 
 if (mysqli_query($conn, $sql)) {
-    echo $name . " added into records successfully";
+    echo $name . " added into records successfully.";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
